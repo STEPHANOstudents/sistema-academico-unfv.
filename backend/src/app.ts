@@ -5,20 +5,26 @@
 
 import express from 'express';
 import cors from 'cors';
-import { CLIENTE_URL } from './config/constantes';
 import enrutadorPrincipal from './routes';
 import { manejarErrores } from './middlewares/manejoErrores';
+import { cargarDatosPrueba } from './data/datosPrueba';
+import { secretariosDB } from './data/baseDatosMemoria';
 
 /**
  * Crea y configura una instancia de la aplicación Express lista para funcionar.
  */
 export function crearApp(): express.Application {
+  // Asegurar carga de datos de prueba si aún no existen
+  if (secretariosDB.length === 0) {
+    cargarDatosPrueba();
+  }
+
   const app = express();
 
-  // Habilitar CORS para permitir peticiones desde el frontend Vite
+  // Habilitar CORS para permitir peticiones desde cualquier origen (local y despliegues en Vercel)
   app.use(
     cors({
-      origin: [CLIENTE_URL, 'http://localhost:5173', 'http://127.0.0.1:5173'],
+      origin: true,
       credentials: true
     })
   );
