@@ -30,8 +30,10 @@ export async function llamarApi<T>(ruta: string, opciones: RequestInit = {}): Pr
     cabeceras['Authorization'] = `Bearer ${token}`;
   }
 
-  // Asegurar que la ruta comience con /api si no lo tiene ya
-  const urlFinal = ruta.startsWith('/api') ? ruta : `/api${ruta.startsWith('/') ? '' : '/'}${ruta}`;
+  // Base URL opcional desde variable de entorno (para despliegue en Render/Vercel)
+  const apiBase = import.meta.env.VITE_API_URL ? (import.meta.env.VITE_API_URL as string).replace(/\/$/, '') : '';
+  const rutaRelativa = ruta.startsWith('/api') ? ruta : `/api${ruta.startsWith('/') ? '' : '/'}${ruta}`;
+  const urlFinal = `${apiBase}${rutaRelativa}`;
 
   const respuesta = await fetch(urlFinal, {
     ...opciones,
