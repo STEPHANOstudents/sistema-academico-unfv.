@@ -1,0 +1,116 @@
+/**
+ * Estilos para el menú lateral de secretaría.
+ * Colores gobernados exclusivamente por variables de tema.css.
+ */
+
+.menu-lateral {
+  width: 260px;
+  background-color: var(--color-superficie);
+  border-right: 1px solid var(--color-borde);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  min-height: calc(100vh - 75px);
+  padding: 1.25rem 0;
+}
+
+.menu-lateral-titulo {
+  padding: 0 1.25rem 0.75rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-texto-suave);
+  border-bottom: 1px solid var(--color-borde);
+  margin-bottom: 0.75rem;
+}
+
+.menu-lateral-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.menu-lateral-item {
+  margin: 0 0.5rem;
+}
+
+.menu-lateral-enlace {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 0.85rem;
+  color: var(--color-texto);
+  border-radius: var(--radio-borde);
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transicion-rapida);
+}
+
+.menu-lateral-enlace:hover {
+  background-color: var(--color-fondo);
+  color: var(--color-primario-oscuro);
+  text-decoration: none;
+}
+
+.menu-lateral-enlace-activo {
+  background-color: var(--color-primario-claro);
+  color: var(--color-primario-oscuro);
+  font-weight: 600;
+  border-left: 3px solid var(--color-primario);
+}
+
+.menu-lateral-icono {
+  font-size: 1.1rem;
+}
+
+.menu-lateral-texto {
+  flex: 1;
+}
+
+.menu-lateral-proximamente {
+  font-size: 0.68rem;
+  background-color: var(--color-fondo);
+  color: var(--color-texto-suave);
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radio-circulo);
+  border: 1px solid var(--color-borde);
+  text-transform: uppercase;
+}
+
+.menu-lateral-overlay {
+  display: none;
+}
+
+/* Adaptación responsive para pantallas estrechas */
+@media (max-width: 768px) {
+  .menu-lateral {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    bottom: 0;
+    z-index: 90;
+    transform: translateX(-100%);
+    transition: transform var(--transicion-rapida);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .menu-lateral-abierto {
+    transform: translateX(0);
+  }
+
+  .menu-lateral-overlay {
+    display: block;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 80;
+  }
+}

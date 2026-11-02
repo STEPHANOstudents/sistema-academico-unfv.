@@ -1,0 +1,49 @@
+/**
+ * Definición central de temas y variables de diseño institucional UNFV.
+ * TODOS los colores de la aplicación residen exclusivamente en este archivo.
+ * Ningún otro archivo CSS debe contener valores hexadecimales directos.
+ */
+
+:root {
+  /* Marca institucional UNFV */
+  --color-primario: #7A1226;        /* Guinda institucional */
+  --color-primario-oscuro: #55091A; /* Variante oscura para cabecera, contrastes y estados hover */
+  --color-primario-claro: #F6E9EC;  /* Tono sutil para fondos de selección y filas activas */
+
+  /* Colores neutros de interfaz */
+  --color-texto: #1F1F24;           /* Texto de alto contraste para máxima legibilidad */
+  --color-texto-suave: #5C5C66;     /* Texto secundario para descripciones y ayudas */
+  --color-fondo: #F4F4F6;           /* Fondo general sobrio de la página */
+  --color-superficie: #FFFFFF;      /* Fondos de tarjetas, paneles y tablas */
+  --color-borde: #D9D9DF;           /* Delimitadores finos y accesibles */
+  --color-plata: #B8BAC2;           /* Líneas ornamentales y separadores institucionales */
+
+  /* Estados académicos y de alerta */
+  --color-aprobado: #1E7B4A;        /* Verde institucional para condición de aprobado */
+  --color-desaprobado: #B3261E;     /* Rojo sobrio para condición de desaprobado y botones de peligro */
+  --color-en-curso: #8A6100;        /* Ocre / ámbar para asignaturas con notas en proceso */
+  --color-sin-notas: #5C5C66;       /* Gris neutro para prácticas pendientes */
+
+  /* Fondos tenues para insignias de estado */
+  --color-aprobado-fondo: #E8F5E9;
+  --color-desaprobado-fondo: #FFEBEE;
+  --color-en-curso-fondo: #FFF8E1;
+  --color-sin-notas-fondo: #EEEEF2;
+
+  /* Blanco puro y estados de foco */
+  --color-blanco: #FFFFFF;
+  --color-foco: #7A1226;
+
+  /* Tipografía institucional */
+  --fuente-titulo: 'Merriweather', Georgia, serif;
+  --fuente-texto: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Medidas y bordes */
+  --radio-borde: 4px;
+  --radio-borde-md: 6px;
+  --radio-borde-lg: 8px;
+  --radio-circulo: 9999px;
+
+  /* Transiciones */
+  --transicion-rapida: 0.15s ease-in-out;
+}

@@ -1,0 +1,27 @@
+/**
+ * Estilos para el diseño del portal del Alumno.
+ * Todo color definido mediante variables de tema.css.
+ */
+
+.layout-alumno {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-fondo);
+}
+
+.layout-alumno-contenido {
+  flex: 1;
+  padding: 2rem 1.25rem;
+}
+
+.layout-alumno-ancho {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .layout-alumno-contenido {
+    padding: 1rem 0.75rem;
+  }
+}

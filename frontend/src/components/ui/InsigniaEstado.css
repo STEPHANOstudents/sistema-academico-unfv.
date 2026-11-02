@@ -1,0 +1,51 @@
+/**
+ * Estilos para las etiquetas de estado del curso.
+ * Todo color definido mediante variables de tema.css.
+ */
+
+.insignia-estado {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radio-circulo);
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+.insignia-punto {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: var(--radio-circulo);
+  background-color: currentColor;
+}
+
+/* Estado: Aprobado */
+.insignia-aprobado {
+  background-color: var(--color-aprobado-fondo);
+  color: var(--color-aprobado);
+  border: 1px solid var(--color-aprobado);
+}
+
+/* Estado: Desaprobado */
+.insignia-desaprobado {
+  background-color: var(--color-desaprobado-fondo);
+  color: var(--color-desaprobado);
+  border: 1px solid var(--color-desaprobado);
+}
+
+/* Estado: En Curso */
+.insignia-en-curso {
+  background-color: var(--color-en-curso-fondo);
+  color: var(--color-en-curso);
+  border: 1px solid var(--color-en-curso);
+}
+
+/* Estado: Sin Notas */
+.insignia-sin-notas {
+  background-color: var(--color-sin-notas-fondo);
+  color: var(--color-sin-notas);
+  border: 1px solid var(--color-borde);
+}

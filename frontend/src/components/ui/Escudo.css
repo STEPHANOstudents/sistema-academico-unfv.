@@ -1,0 +1,29 @@
+/**
+ * Estilos para el componente Escudo / Marcador Institucional.
+ * Colores gobernados exclusivamente por variables de tema.css.
+ */
+
+.escudo-marcador {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  border-radius: var(--radio-circulo);
+  border: 2px solid var(--color-primario-oscuro);
+  flex-shrink: 0;
+  user-select: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.escudo-siglas {
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.escudo-imagen {
+  object-fit: contain;
+  flex-shrink: 0;
+}

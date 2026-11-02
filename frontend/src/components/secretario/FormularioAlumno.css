@@ -1,0 +1,27 @@
+/**
+ * Estilos para el formulario de alumno.
+ * Todo color definido mediante variables de tema.css.
+ */
+
+.formulario-alumno {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-alumno-nota {
+  font-size: 0.82rem;
+  color: var(--color-texto-suave);
+  background-color: var(--color-fondo);
+  padding: 0.75rem 0.85rem;
+  border-radius: var(--radio-borde);
+  border-left: 3px solid var(--color-primario);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.formulario-alumno-acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}

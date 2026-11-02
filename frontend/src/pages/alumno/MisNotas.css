@@ -1,0 +1,259 @@
+/**
+ * Estilos para el portal del Estudiante (Mis Notas).
+ * Diseñado con énfasis responsivo para celulares y pantallas de escritorio.
+ * Todo color proviene de tema.css.
+ */
+
+.mis-notas-pagina {
+  padding-bottom: 2.5rem;
+}
+
+.mis-notas-perfil-tarjeta {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde-md);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+}
+
+.mis-notas-saludo {
+  display: flex;
+  flex-direction: column;
+}
+
+.mis-notas-codigo-pill {
+  display: inline-block;
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-primario);
+  background-color: var(--color-primario-claro);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radio-circulo);
+  border: 1px solid var(--color-primario);
+  width: fit-content;
+  margin-bottom: 0.5rem;
+}
+
+.mis-notas-estudiante-nombre {
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario-oscuro);
+  font-size: 1.5rem;
+  margin: 0 0 0.35rem 0;
+  line-height: 1.25;
+}
+
+.mis-notas-subtexto {
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.mis-notas-promedio-general-caja {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 180px;
+}
+
+.mis-notas-promedio-titulo {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: var(--color-texto-suave);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.mis-notas-promedio-grande {
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: var(--fuente-titulo);
+  line-height: 1;
+}
+
+.mis-notas-promedio-subtitulo {
+  font-size: 0.75rem;
+  color: var(--color-texto-suave);
+  margin-top: 0.35rem;
+  font-weight: 500;
+}
+
+.mis-notas-reglamento-aviso {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  background-color: var(--color-primario-claro);
+  border: 1px solid var(--color-borde);
+  border-left: 4px solid var(--color-primario);
+  padding: 0.95rem 1.15rem;
+  border-radius: var(--radio-borde);
+  margin-bottom: 2rem;
+}
+
+.reglamento-icono {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.reglamento-texto {
+  font-size: 0.85rem;
+  color: var(--color-texto);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.mis-notas-cursos-titulo {
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario-oscuro);
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.mis-notas-cursos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.tarjeta-curso-estudiante {
+  margin-bottom: 0;
+}
+
+.curso-estudiante-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-borde);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.curso-estudiante-identidad {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.curso-estudiante-codigo {
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  background-color: var(--color-fondo);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radio-borde);
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto);
+}
+
+.curso-estudiante-nombre {
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario-oscuro);
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.curso-estudiante-cuerpo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.25rem;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.curso-estudiante-practicas-grid {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.curso-estudiante-promedio-bloque {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 110px;
+}
+
+.curso-estudiante-promedio-etiqueta {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-texto-suave);
+  margin-bottom: 0.2rem;
+}
+
+.curso-estudiante-promedio-valor {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.promedio-aprobado {
+  color: var(--color-aprobado);
+}
+
+.promedio-desaprobado {
+  color: var(--color-desaprobado);
+}
+
+.promedio-vacio {
+  color: var(--color-texto-suave);
+}
+
+.mis-notas-vacio {
+  background-color: var(--color-superficie);
+  border: 1px dashed var(--color-borde);
+  border-radius: var(--radio-borde-md);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  color: var(--color-texto-suave);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mis-notas-icono-vacio {
+  font-size: 3rem;
+}
+
+.mis-notas-vacio h4 {
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario-oscuro);
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.mis-notas-vacio p {
+  font-size: 0.92rem;
+  max-width: 420px;
+  margin: 0;
+}
+
+@media (max-width: 650px) {
+  .mis-notas-perfil-tarjeta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mis-notas-promedio-general-caja {
+    align-items: flex-start;
+  }
+
+  .curso-estudiante-cabecera,
+  .curso-estudiante-cuerpo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .curso-estudiante-promedio-bloque {
+    align-items: flex-start;
+  }
+}

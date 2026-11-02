@@ -1,0 +1,49 @@
+/**
+ * Estilos para la pantalla de acceso denegado.
+ * Todo color definido mediante variables de tema.css.
+ */
+
+.no-autorizado-pantalla {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.no-autorizado-tarjeta {
+  max-width: 500px;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.no-autorizado-icono {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.no-autorizado-titulo {
+  font-family: var(--fuente-titulo);
+  color: var(--color-desaprobado);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.no-autorizado-descripcion {
+  color: var(--color-texto);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.no-autorizado-detalle {
+  color: var(--color-texto-suave);
+  font-size: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+.no-autorizado-acciones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

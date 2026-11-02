@@ -1,0 +1,45 @@
+/**
+ * Estilos para el contenedor de tarjeta institucional.
+ * Todo color proviene de tema.css.
+ */
+
+.tarjeta-unfv {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde-md);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.tarjeta-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-borde);
+  background-color: var(--color-superficie);
+}
+
+.tarjeta-titulo {
+  font-size: 1.15rem;
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario-oscuro);
+  margin: 0;
+}
+
+.tarjeta-subtitulo {
+  font-size: 0.85rem;
+  color: var(--color-texto-suave);
+  margin-top: 0.2rem;
+}
+
+.tarjeta-cuerpo {
+  padding: 1.25rem;
+}
+
+.tarjeta-acciones {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}

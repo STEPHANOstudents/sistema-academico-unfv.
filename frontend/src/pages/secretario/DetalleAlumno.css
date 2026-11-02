@@ -1,0 +1,250 @@
+/**
+ * Estilos para la pantalla de Detalle Académico del Alumno.
+ * Todo color proviene de tema.css.
+ */
+
+.detalle-alumno-pagina {
+  padding-bottom: 2rem;
+}
+
+.detalle-alumno-acciones-encabezado {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ficha-alumno-tarjeta {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde-md);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+}
+
+.ficha-alumno-identidad {
+  display: flex;
+  flex-direction: column;
+}
+
+.ficha-alumno-codigo {
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: var(--color-primario);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.ficha-alumno-nombre {
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario-oscuro);
+  font-size: 1.45rem;
+  margin: 0 0 0.35rem 0;
+}
+
+.ficha-alumno-edad {
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+}
+
+.ficha-alumno-promedio-general {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.ficha-promedio-etiqueta {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--color-texto-suave);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.ficha-promedio-valor-caja {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.ficha-promedio-numero {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-family: var(--fuente-titulo);
+  line-height: 1;
+}
+
+.ficha-promedio-condicion {
+  font-size: 0.78rem;
+  color: var(--color-texto-suave);
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.detalle-cursos-seccion {
+  display: flex;
+  flex-direction: column;
+}
+
+.detalle-cursos-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.detalle-cursos-titulo {
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario-oscuro);
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.detalle-cursos-ayuda {
+  font-size: 0.82rem;
+  color: var(--color-texto-suave);
+  font-style: italic;
+}
+
+.detalle-cursos-vacio {
+  background-color: var(--color-superficie);
+  border: 1px dashed var(--color-borde);
+  border-radius: var(--radio-borde-md);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  color: var(--color-texto-suave);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.detalle-cursos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.tarjeta-curso-alumno {
+  margin-bottom: 0;
+}
+
+.curso-fila-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-borde);
+  flex-wrap: wrap;
+}
+
+.curso-datos {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.curso-codigo-badge {
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  background-color: var(--color-fondo);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radio-borde);
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto);
+}
+
+.curso-nombre-texto {
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario-oscuro);
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.curso-promedio-bloque {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.curso-promedio-etiqueta {
+  font-size: 0.75rem;
+  color: var(--color-texto-suave);
+  text-transform: uppercase;
+}
+
+.curso-promedio-valor {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.curso-calificaciones-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.curso-casillas-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.curso-practicas-etiqueta {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.curso-boton-retirar {
+  background: transparent;
+  border: 1px solid var(--color-desaprobado);
+  color: var(--color-desaprobado);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radio-borde);
+  cursor: pointer;
+  transition: all var(--transicion-rapida);
+}
+
+.curso-boton-retirar:hover {
+  background-color: var(--color-desaprobado);
+  color: var(--color-blanco);
+}
+
+@media (max-width: 600px) {
+  .ficha-alumno-tarjeta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ficha-alumno-promedio-general {
+    align-items: flex-start;
+  }
+
+  .curso-fila-principal,
+  .curso-calificaciones-fila {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .curso-promedio-bloque {
+    align-items: flex-start;
+  }
+}

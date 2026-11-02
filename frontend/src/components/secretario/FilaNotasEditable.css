@@ -1,0 +1,94 @@
+/**
+ * Estilos para las casillas editables de notas.
+ * Todo color definido mediante variables de tema.css.
+ */
+
+.fila-notas-editable {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.casilla-practica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 0.15rem;
+}
+
+.casilla-etiqueta {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-texto-suave);
+  text-transform: uppercase;
+}
+
+.casilla-input {
+  width: 44px;
+  height: 36px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radio-borde);
+  border: 1px solid var(--color-borde);
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  transition: all var(--transicion-rapida);
+}
+
+.casilla-input:focus {
+  border-color: var(--color-primario);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primario-claro);
+}
+
+.nota-input-aprobado {
+  color: var(--color-aprobado);
+  background-color: var(--color-aprobado-fondo);
+  border-color: var(--color-aprobado);
+}
+
+.nota-input-desaprobado {
+  color: var(--color-desaprobado);
+  background-color: var(--color-desaprobado-fondo);
+  border-color: var(--color-desaprobado);
+}
+
+.nota-input-vacio {
+  color: var(--color-texto-suave);
+  background-color: var(--color-sin-notas-fondo);
+}
+
+.casilla-guardando {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.casilla-mini-spinner {
+  position: absolute;
+  top: 18px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--color-primario);
+  border-right-color: transparent;
+  border-radius: var(--radio-circulo);
+  animation: girarMini 0.6s linear infinite;
+}
+
+@keyframes girarMini {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Indicador visual de práctica pendiente destacada */
+.casilla-resaltada .casilla-input {
+  border: 2px dashed var(--color-en-curso);
+  background-color: var(--color-en-curso-fondo);
+}

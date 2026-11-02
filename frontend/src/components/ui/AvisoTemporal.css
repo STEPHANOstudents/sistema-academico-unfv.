@@ -1,0 +1,66 @@
+/**
+ * Estilos para las notificaciones temporales de éxito.
+ * Todo color proviene de tema.css.
+ */
+
+.aviso-temporal-contenedor {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--color-primario-oscuro);
+  color: var(--color-blanco);
+  border-left: 4px solid var(--color-aprobado);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radio-borde);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 2000;
+  animation: avisoDeslizar 0.25s ease-out;
+  max-width: 420px;
+}
+
+@keyframes avisoDeslizar {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.aviso-temporal-icono {
+  background-color: var(--color-aprobado);
+  color: var(--color-blanco);
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: var(--radio-circulo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.aviso-temporal-texto {
+  font-size: 0.92rem;
+  line-height: 1.3;
+}
+
+.aviso-temporal-boton {
+  background: transparent;
+  border: none;
+  color: var(--color-plata);
+  font-size: 1.35rem;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  line-height: 1;
+}
+
+.aviso-temporal-boton:hover {
+  color: var(--color-blanco);
+}

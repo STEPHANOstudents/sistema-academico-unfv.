@@ -1,0 +1,23 @@
+/**
+ * Estilos para el modal de confirmación.
+ * Todo color proviene de tema.css.
+ */
+
+.modal-confirmacion-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.modal-confirmacion-mensaje {
+  color: var(--color-texto);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.modal-confirmacion-acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}

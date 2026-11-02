@@ -1,0 +1,107 @@
+/**
+ * Estilos para los estados de carga, error y vacío.
+ * Todo color proviene de tema.css.
+ */
+
+.estado-carga-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 1.5rem;
+  color: var(--color-primario);
+  gap: 1rem;
+}
+
+.estado-carga-spinner {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid var(--color-primario-claro);
+  border-top-color: var(--color-primario);
+  border-radius: var(--radio-circulo);
+  animation: girarCarga 0.8s linear infinite;
+}
+
+@keyframes girarCarga {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.estado-carga-texto {
+  font-size: 0.95rem;
+  color: var(--color-texto-suave);
+}
+
+.estado-carga-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-color: var(--color-desaprobado-fondo);
+  border: 1px solid var(--color-desaprobado);
+  border-radius: var(--radio-borde-md);
+  margin: 1.5rem 0;
+}
+
+.estado-carga-icono-error {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radio-circulo);
+  background-color: var(--color-desaprobado);
+  color: var(--color-blanco);
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.estado-carga-titulo-error {
+  font-family: var(--fuente-titulo);
+  color: var(--color-desaprobado);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.estado-carga-detalle-error {
+  color: var(--color-texto);
+  font-size: 0.95rem;
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+}
+
+.estado-carga-vacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background-color: var(--color-superficie);
+  border: 1px dashed var(--color-borde);
+  border-radius: var(--radio-borde-md);
+  margin: 1.5rem 0;
+}
+
+.estado-carga-icono-vacio {
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.estado-carga-texto-vacio {
+  color: var(--color-texto-suave);
+  font-size: 1rem;
+  max-width: 450px;
+  margin-bottom: 1.25rem;
+  line-height: 1.45;
+}
+
+.estado-carga-accion-vacio {
+  display: flex;
+  justify-content: center;
+}

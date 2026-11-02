@@ -1,0 +1,89 @@
+/**
+ * Estilos para las tablas institucionales UNFV.
+ * Encabezado guinda claro, filas alternadas y bordes definidos con variables de tema.css.
+ */
+
+.tabla-datos-contenedor {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde-md);
+  background-color: var(--color-superficie);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.tabla-datos-elemento {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+.tabla-th {
+  background-color: var(--color-primario-claro);
+  color: var(--color-primario-oscuro);
+  font-family: var(--fuente-texto);
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--color-plata);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.tabla-th-ordenable {
+  cursor: pointer;
+  transition: background-color var(--transicion-rapida);
+}
+
+.tabla-th-ordenable:hover {
+  background-color: var(--color-borde);
+}
+
+.tabla-th-contenido {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.tabla-icono-orden {
+  font-size: 0.75rem;
+  color: var(--color-primario);
+}
+
+.tabla-td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-borde);
+  color: var(--color-texto);
+  vertical-align: middle;
+}
+
+.tabla-fila {
+  transition: background-color var(--transicion-rapida);
+}
+
+.tabla-fila:nth-child(even) {
+  background-color: var(--color-fondo);
+}
+
+.tabla-fila:hover {
+  background-color: var(--color-primario-claro);
+}
+
+.tabla-celda-vacia {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--color-texto-suave);
+  font-style: italic;
+}
+
+.tabla-alineacion-izquierda {
+  text-align: left;
+}
+
+.tabla-alineacion-centro {
+  text-align: center;
+}
+
+.tabla-alineacion-derecha {
+  text-align: right;
+}

@@ -1,0 +1,442 @@
+/**
+ * Estilos para el Widget Interactivo de Speaki.
+ * Todos los colores provienen estrictamente de variables de tema.css.
+ * Cero códigos hexadecimales directos.
+ */
+
+.speaki-widget-flotante {
+  position: fixed;
+  bottom: 24px;
+  right: 28px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+/* Globo de diálogo cómico */
+.speaki-globo-dialogo {
+  pointer-events: auto;
+  position: relative;
+  max-width: 230px;
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  border: 2px solid var(--color-primario);
+  border-radius: var(--radio-borde-md);
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 0.65rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  animation: aparecerGlobo 0.25s ease-out;
+  text-align: center;
+}
+
+@keyframes aparecerGlobo {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.speaki-globo-texto {
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Cola del globo de diálogo apuntando hacia Speaki */
+.speaki-globo-cola {
+  position: absolute;
+  bottom: -9px;
+  right: 48px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid var(--color-primario);
+}
+
+.speaki-globo-cola::after {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid var(--color-superficie);
+}
+
+/* Barra de herramientas pequeñas de Speaki */
+.speaki-herramientas {
+  pointer-events: auto;
+  display: flex;
+  gap: 0.35rem;
+  margin-bottom: 0.35rem;
+  opacity: 0.85;
+  transition: opacity var(--transicion-rapida);
+}
+
+.speaki-herramientas:hover {
+  opacity: 1;
+}
+
+.speaki-herramienta-btn {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-circulo);
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  cursor: pointer;
+  color: var(--color-texto);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all var(--transicion-rapida);
+}
+
+.speaki-herramienta-btn:hover {
+  background-color: var(--color-primario-claro);
+  border-color: var(--color-primario);
+  transform: scale(1.1);
+}
+
+/* Personaje interactivo Speaki */
+.speaki-personaje-contenedor {
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transform-origin: bottom center;
+}
+
+/* Mano apuntando hacia abajo aplastando a Speaki fielmente como en el meme */
+.speaki-mano-aplastadora {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.28));
+}
+
+/* 1. Mano bajando suavemente sincronizada con SpeakiSad2 (~0.85s) */
+.speaki-mano-bajando {
+  animation: manoBajandoSuave 0.85s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes manoBajandoSuave {
+  0% {
+    top: -85px;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.9);
+  }
+  30% {
+    top: -50px;
+    opacity: 1;
+    transform: translateX(-50%) scale(1.04);
+  }
+  100% {
+    top: -24px;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* 2. Mano sostenida sobre la capucha de Speaki con respiración sutil */
+.speaki-mano-sostenida {
+  top: -24px;
+  opacity: 1;
+  animation: manoRespirando 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes manoRespirando {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(2px);
+  }
+}
+
+/* 3. Mano subiendo suavemente al desaplastar sincronizado con SpeakiSad3 (~0.8s) */
+.speaki-mano-subiendo {
+  animation: manoSubiendoSuave 0.8s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
+}
+
+@keyframes manoSubiendoSuave {
+  0% {
+    top: -24px;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  40% {
+    top: -55px;
+    opacity: 0.9;
+    transform: translateX(-50%) scale(1.05);
+  }
+  100% {
+    top: -100px;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.85);
+  }
+}
+
+.speaki-imagen {
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.16));
+  transition: filter var(--transicion-rapida);
+  display: block;
+}
+
+.speaki-personaje-contenedor:hover .speaki-imagen {
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.24));
+}
+
+/* Sombra elíptica en el piso */
+.speaki-sombra {
+  width: 76px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.16);
+  border-radius: var(--radio-circulo);
+  margin-top: -6px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Animación de flotación suave en estado normal */
+.speaki-flotando {
+  animation: flotarSpeaki 2.8s ease-in-out infinite;
+}
+
+@keyframes flotarSpeaki {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Animación cuando está Feliz: Pellizco elástico de cachetes (Squish & Stretch) */
+.speaki-squish-activo {
+  animation: squishCachetes 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes squishCachetes {
+  0% {
+    transform: scale(1, 1);
+  }
+  20% {
+    transform: scale(1.22, 0.84) translateY(4px);
+  }
+  50% {
+    transform: scale(0.92, 1.12) translateY(-8px);
+  }
+  75% {
+    transform: scale(1.06, 0.96) translateY(2px);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+/* Animación progresiva y suave de aplastamiento (Sincronizada con SpeakiSad2: 0.85s) */
+.speaki-aplastando-suave {
+  animation: aplastarPocoAPoco 0.85s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes aplastarPocoAPoco {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  30% {
+    transform: scale(1.03, 0.95) translateY(2px);
+  }
+  65% {
+    transform: scale(1.07, 0.89) translateY(4px);
+  }
+  100% {
+    /* Aplastamiento suave y fiel al meme original de la imagen 2 */
+    transform: scale(1.10, 0.85) translateY(5px);
+  }
+}
+
+/* Estado que se mantiene aplastada con respiración sutil */
+.speaki-estado-aplastada {
+  transform: scale(1.10, 0.85) translateY(5px);
+  animation: respiracionAplastada 2.4s ease-in-out infinite alternate;
+}
+
+.speaki-estado-aplastada .speaki-sombra,
+.speaki-aplastando-suave .speaki-sombra {
+  width: 86px;
+  height: 11px;
+}
+
+@keyframes respiracionAplastada {
+  0% {
+    transform: scale(1.10, 0.85) translateY(5px);
+  }
+  100% {
+    transform: scale(1.11, 0.83) translateY(6px);
+  }
+}
+
+/* Animación progresiva y suave de desaplastamiento / liberación (Sincronizada con SpeakiSad3: 0.8s) */
+.speaki-desaplastando-suave {
+  animation: desaplastarPocoAPoco 0.8s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
+}
+
+@keyframes desaplastarPocoAPoco {
+  0% {
+    transform: scale(1.10, 0.85) translateY(5px);
+  }
+  35% {
+    transform: scale(1.05, 0.93) translateY(2px);
+  }
+  65% {
+    /* Rebote elástico sutil */
+    transform: scale(0.97, 1.05) translateY(-4px);
+  }
+  85% {
+    transform: scale(1.02, 0.98) translateY(1px);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+/* Widget en Modo Reposo: Avatar de Speaki visible en la esquina inferior derecha */
+.speaki-widget-reposo {
+  position: fixed;
+  bottom: 20px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.speaki-avatar-reposo-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  border: 2px solid var(--color-primario);
+  border-radius: 9999px;
+  padding: 0.4rem 0.95rem 0.4rem 0.4rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  transition: all var(--transicion-rapida);
+  user-select: none;
+}
+
+.speaki-avatar-reposo-btn:hover {
+  background-color: var(--color-primario-claro);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+}
+
+.speaki-avatar-circulo {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radio-circulo);
+  background-color: var(--color-primario-claro);
+  border: 1.5px solid var(--color-primario);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.speaki-avatar-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform var(--transicion-rapida);
+}
+
+.speaki-avatar-reposo-btn:hover .speaki-avatar-img {
+  transform: rotate(8deg) scale(1.1);
+}
+
+.speaki-insignia-z {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  font-size: 0.9rem;
+  animation: flotarZ 2s ease-in-out infinite alternate;
+}
+
+@keyframes flotarZ {
+  0% {
+    transform: translateY(0) scale(0.9);
+  }
+  100% {
+    transform: translateY(-4px) scale(1.15);
+  }
+}
+
+.speaki-etiqueta-reposo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.speaki-texto-reposo {
+  font-family: var(--fuente-titulo);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primario-oscuro);
+  line-height: 1.2;
+}
+
+.speaki-subtexto-reposo {
+  font-size: 0.72rem;
+  color: var(--color-texto-secundario);
+  font-weight: 500;
+}
+
+/* Adaptación responsive para celulares */
+@media (max-width: 600px) {
+  .speaki-widget-flotante {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .speaki-widget-reposo {
+    bottom: 14px;
+    right: 14px;
+  }
+
+  .speaki-imagen {
+    width: 95px;
+    height: 95px;
+  }
+
+  .speaki-mano-aplastadora {
+    width: 48px;
+  }
+
+  .speaki-globo-dialogo {
+    max-width: 190px;
+    font-size: 0.78rem;
+    padding: 0.5rem 0.65rem;
+  }
+}

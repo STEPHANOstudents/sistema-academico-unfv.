@@ -1,0 +1,152 @@
+/**
+ * Estilos para la pantalla de Registro de Calificaciones por Curso.
+ * Todo color definido mediante variables de tema.css.
+ */
+
+.registro-notas-pagina {
+  padding-bottom: 2rem;
+}
+
+.registro-notas-panel-control {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde-md);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+}
+
+.registro-control-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.registro-control-etiqueta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.registro-select-curso,
+.registro-select-resaltar {
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radio-borde);
+  border: 1px solid var(--color-borde);
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  font-size: 0.92rem;
+}
+
+.registro-select-curso:focus,
+.registro-select-resaltar:focus {
+  border-color: var(--color-primario);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primario-claro);
+}
+
+.registro-ayuda-teclado {
+  margin-left: auto;
+  font-size: 0.82rem;
+  color: var(--color-texto-suave);
+  background-color: var(--color-fondo);
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radio-borde);
+  border: 1px solid var(--color-borde);
+}
+
+.tecla-ayuda-tag {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-plata);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--color-primario-oscuro);
+}
+
+.registro-notas-tabla-contenedor {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde-md);
+  background-color: var(--color-superficie);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.registro-notas-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.registro-notas-tabla th {
+  background-color: var(--color-primario-claro);
+  color: var(--color-primario-oscuro);
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--color-plata);
+  text-align: left;
+}
+
+.registro-notas-tabla td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-borde);
+  vertical-align: middle;
+}
+
+.registro-fila-alumno:nth-child(even) {
+  background-color: var(--color-fondo);
+}
+
+.registro-fila-alumno:hover {
+  background-color: var(--color-primario-claro);
+}
+
+.registro-codigo-texto {
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
+.registro-nombre-texto {
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.registro-promedio-pill {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radio-circulo);
+  font-weight: 700;
+  font-size: 0.88rem;
+  min-width: 50px;
+}
+
+.promedio-aprobado {
+  background-color: var(--color-aprobado-fondo);
+  color: var(--color-aprobado);
+  border: 1px solid var(--color-aprobado);
+}
+
+.promedio-desaprobado {
+  background-color: var(--color-desaprobado-fondo);
+  color: var(--color-desaprobado);
+  border: 1px solid var(--color-desaprobado);
+}
+
+.promedio-vacio {
+  color: var(--color-texto-suave);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .registro-ayuda-teclado {
+    margin-left: 0;
+    width: 100%;
+  }
+}

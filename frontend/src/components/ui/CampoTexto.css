@@ -1,0 +1,60 @@
+/**
+ * Estilos para el campo de texto y sus mensajes informativos.
+ * Utiliza variables de tema.css exclusivamente.
+ */
+
+.campo-texto-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.15rem;
+  text-align: left;
+}
+
+.campo-texto-etiqueta {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.campo-requerido {
+  color: var(--color-desaprobado);
+}
+
+.campo-texto-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
+  color: var(--color-texto);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  transition: border-color var(--transicion-rapida), box-shadow var(--transicion-rapida);
+}
+
+.campo-texto-input:focus {
+  border-color: var(--color-primario);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primario-claro);
+}
+
+.campo-texto-input:disabled {
+  background-color: var(--color-fondo);
+  color: var(--color-texto-suave);
+  cursor: not-allowed;
+}
+
+.campo-con-error .campo-texto-input {
+  border-color: var(--color-desaprobado);
+}
+
+.campo-texto-ayuda {
+  font-size: 0.8rem;
+  color: var(--color-texto-suave);
+}
+
+.campo-texto-error {
+  font-size: 0.82rem;
+  color: var(--color-desaprobado);
+  font-weight: 500;
+}

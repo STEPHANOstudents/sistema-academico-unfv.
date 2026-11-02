@@ -1,0 +1,43 @@
+/**
+ * Estilos para la pantalla de error 404.
+ * Todo color definido mediante variables de tema.css.
+ */
+
+.no-encontrada-pantalla {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.no-encontrada-tarjeta {
+  max-width: 460px;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.no-encontrada-codigo {
+  font-size: 3.5rem;
+  color: var(--color-primario);
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.no-encontrada-titulo {
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario-oscuro);
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.no-encontrada-descripcion {
+  color: var(--color-texto-suave);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.no-encontrada-acciones {
+  display: flex;
+  justify-content: center;
+}

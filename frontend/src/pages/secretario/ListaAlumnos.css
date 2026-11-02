@@ -1,0 +1,154 @@
+/**
+ * Estilos para la pantalla de Gestión de Alumnos.
+ * Todo color definido mediante variables de tema.css.
+ */
+
+.lista-alumnos-pagina {
+  padding-bottom: 2rem;
+}
+
+.alumnos-barra-herramientas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.alumnos-buscador {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 460px;
+}
+
+.alumnos-buscador-icono {
+  position: absolute;
+  left: 0.85rem;
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+  pointer-events: none;
+}
+
+.alumnos-buscador-input {
+  width: 100%;
+  padding: 0.65rem 2rem 0.65rem 2.4rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  font-size: 0.92rem;
+}
+
+.alumnos-buscador-input:focus {
+  border-color: var(--color-primario);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primario-claro);
+}
+
+.alumnos-buscador-limpiar {
+  position: absolute;
+  right: 0.65rem;
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--color-texto-suave);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.alumnos-conteo-info {
+  font-size: 0.88rem;
+  color: var(--color-texto-suave);
+}
+
+.alumno-codigo-texto {
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: var(--color-primario-oscuro);
+}
+
+.badge-cursos {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radio-circulo);
+  font-size: 0.82rem;
+  border: 1px solid var(--color-borde);
+}
+
+.promedio-pill {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radio-circulo);
+  font-weight: 700;
+  font-size: 0.88rem;
+  min-width: 50px;
+}
+
+.promedio-aprobado {
+  background-color: var(--color-aprobado-fondo);
+  color: var(--color-aprobado);
+  border: 1px solid var(--color-aprobado);
+}
+
+.promedio-desaprobado {
+  background-color: var(--color-desaprobado-fondo);
+  color: var(--color-desaprobado);
+  border: 1px solid var(--color-desaprobado);
+}
+
+.promedio-vacio {
+  color: var(--color-texto-suave);
+  font-weight: 600;
+}
+
+.alumnos-acciones-fila {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.accion-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radio-borde);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transicion-rapida);
+}
+
+.accion-ver {
+  background-color: var(--color-primario-claro);
+  color: var(--color-primario-oscuro);
+  border-color: var(--color-primario);
+}
+
+.accion-ver:hover {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+}
+
+.accion-editar {
+  color: var(--color-texto);
+  border-color: var(--color-borde);
+}
+
+.accion-editar:hover {
+  background-color: var(--color-fondo);
+  border-color: var(--color-plata);
+}
+
+.accion-eliminar {
+  color: var(--color-desaprobado);
+  border-color: var(--color-desaprobado);
+}
+
+.accion-eliminar:hover {
+  background-color: var(--color-desaprobado);
+  color: var(--color-blanco);
+}

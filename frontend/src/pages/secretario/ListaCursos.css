@@ -1,0 +1,41 @@
+/**
+ * Estilos para la pantalla de Catálogo de Cursos.
+ * Todo color definido mediante variables de tema.css.
+ */
+
+.lista-cursos-pagina {
+  padding-bottom: 2rem;
+}
+
+.curso-codigo-texto {
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: var(--color-primario);
+}
+
+.curso-nombre-fila {
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.badge-cantidad-alumnos {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radio-circulo);
+  font-size: 0.85rem;
+  border: 1px solid var(--color-borde);
+  font-weight: 500;
+}
+
+.formulario-nuevo-curso {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-curso-acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}

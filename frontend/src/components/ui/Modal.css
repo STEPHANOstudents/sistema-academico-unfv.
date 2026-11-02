@@ -1,0 +1,79 @@
+/**
+ * Estilos para el componente Modal.
+ * Todo color definido mediante variables de tema.css.
+ */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-contenedor {
+  width: 100%;
+  background-color: var(--color-superficie);
+  border-radius: var(--radio-borde-md);
+  border: 1px solid var(--color-borde);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+  overflow: hidden;
+  animation: modalAparecer 0.2s ease-out;
+}
+
+@keyframes modalAparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.15rem 1.5rem;
+  border-bottom: 1px solid var(--color-borde);
+  background-color: var(--color-primario-claro);
+}
+
+.modal-titulo {
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario-oscuro);
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.modal-boton-cerrar {
+  background: transparent;
+  border: none;
+  font-size: 1.15rem;
+  color: var(--color-texto-suave);
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+  border-radius: var(--radio-borde);
+  transition: color var(--transicion-rapida);
+}
+
+.modal-boton-cerrar:hover {
+  color: var(--color-primario-oscuro);
+}
+
+.modal-cuerpo {
+  padding: 1.5rem;
+  overflow-y: auto;
+}

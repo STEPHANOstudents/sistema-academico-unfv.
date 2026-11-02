@@ -1,0 +1,40 @@
+/**
+ * Estilos para el encabezado de página institucional.
+ * Todo color definido mediante variables de tema.css.
+ */
+
+.encabezado-pagina {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.encabezado-pagina-textos {
+  flex: 1;
+  min-width: 260px;
+}
+
+.encabezado-pagina-titulo {
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario-oscuro);
+  font-size: 1.55rem;
+  margin: 0 0 0.35rem 0;
+  line-height: 1.25;
+}
+
+.encabezado-pagina-descripcion {
+  color: var(--color-texto-suave);
+  font-size: 0.92rem;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.encabezado-pagina-acciones {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
